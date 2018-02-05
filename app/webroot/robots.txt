@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: http://www.youtubesub.com/action/getRssNews
+Disallow: /cgi-bin/
+Sitemap: http://www.youtubesub.com/sitemap.xml
