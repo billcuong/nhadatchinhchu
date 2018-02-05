@@ -90,8 +90,8 @@ class ScreenFieldLabels {
 			'SCR_MENU_REUP' => 'Video nhà cộng tác viên',
 			'SCR_MENU_SEARCH' => 'Tìm videos bằng api',
 			'SCR_MENU_SEARCH_YT' => 'Tìm videos youtube',
-			'SCR_MENU_SEO_TOP' => 'Seo top web/youtube',
-			'SCR_MENU_GET_RSS_NEWS' => 'Lấy rss tin tức',
+			'SCR_MENU_SEO_TOP' => 'SEO (Web/Youtube)',
+			'SCR_MENU_GET_RSS_NEWS' => 'Lấy tin tự động',
 			'SCR_MENU_HOME' => 'Trang chủ',
 			
 			
