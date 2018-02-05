@@ -20,7 +20,7 @@ class Message {
 					'INVALID_DATE' => 'Ngày không hợp lệ',
 					'ERROR_FULL_SIZE_ONLY' => 'Nhập văn bản bằng fullsize',
 					//Send mail comfirm
-					'EMAIL_CFM_TITLE' => 'v/v Xác nhận email cho tài khoản tại www.youtubesub.com',
+					'EMAIL_CFM_TITLE' => 'v/v Xác nhận email cho tài khoản tại www.nhapholocphat.vn',
 					'EMAIL_CFM_BODY' => ' Email xác nhận, xin đừng reply. Vui lòng click vào link bên dưới để xác nhận: ',
 					'EMAIL_CFM_CHECK' => 'Nội dung xác nhận đã được gửi vào email.',
 					'EMAIL_CFM_NOT_ACTIVE' => 'Tài khoản chưa được xác nhận.',
@@ -78,7 +78,7 @@ class Message {
 					'INVALID_DATE' => '有効な値を入力してください。',
 					'ERROR_FULL_SIZE_ONLY' => '本文は全角で入力してください。',
 					//Send mail comfirm
-					'EMAIL_CFM_TITLE' => 'Email to confirm account at www.youtubesub.com',
+					'EMAIL_CFM_TITLE' => 'Email to confirm account at www.nhapholocphat.vn',
 					'EMAIL_CFM_BODY' => 'Please click to confirm :',
 					'EMAIL_CFM_CHECK' => 'Please confirm in your email.',
 					'EMAIL_CFM_NOT_ACTIVE' => 'Account not verify.',
@@ -135,7 +135,7 @@ class Message {
 					'INVALID_DATE' => 'Invalid date.',
 					'ERROR_FULL_SIZE_ONLY' => 'Please enter full-size character only.',
 					//Send mail comfirm
-					'EMAIL_CFM_TITLE' => 'Email to confirm account at www.youtubesub.com',
+					'EMAIL_CFM_TITLE' => 'Email to confirm account at www.nhapholocphat.vn',
 					'EMAIL_CFM_BODY' => 'Please click to confirm :',
 					'EMAIL_CFM_CHECK' => 'Please confirm in your email.',
 					'EMAIL_CFM_NOT_ACTIVE' => 'Account not verify.',

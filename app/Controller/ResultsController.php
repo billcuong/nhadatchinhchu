@@ -16,7 +16,7 @@ class ResultsController extends AppController {
 	 * Displays a view Results
 	 */
 	public function index() {
-		$this->title = "News & Video - Youman";
+		$this->title = "Mua bán nhà phố - Tư vấn mua bán nhà";
 		$this->urlHistories = array (
 				'Home',
 				$this->title 
@@ -147,7 +147,7 @@ class ResultsController extends AppController {
 	 * Search results on youtube
 	 */
 	public function search() {
-		$this->title = "News & Video - Youman";
+		$this->title = "Mua bán nhà phố - Tư vấn mua bán nhà";
 		$this->urlHistories = array (
 				'Home',
 				$this->title 

@@ -14,7 +14,7 @@ class WatchController extends AppController {
 	 */
 	public function index() {
 		require_once 'GetRssNewsController.php';
-		$this->title = "News & Video - Youman";
+		$this->title = "Mua bán nhà phố - Tư vấn mua bán nhà";
 		$this->urlHistories = array (
 				'Home',
 				$this->title 

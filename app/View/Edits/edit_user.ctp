@@ -193,7 +193,7 @@
 //		if(id_backlink_link == ''){
 //			var html = '<div class="notice">';
 //			html += '	<div class="error">';
-//			html += '		<p>' + 'Please input backlink of www.youtubesub.com.' + '</p>';
+//			html += '		<p>' + 'Please input backlink of www.nhapholocphat.vn.' + '</p>';
 //			html += '	</div>';
 //			html += '</div>';
 //			$('#id_backlink_link'+idx).focus();
@@ -223,7 +223,7 @@
 		if(id_backlink_link == ''){
 			var html = '<div class="notice">';
 			html += '	<div class="error">';
-			html += '		<p>' + 'Please input backlink of www.youtubesub.com.' + '</p>';
+			html += '		<p>' + 'Please input backlink of www.nhapholocphat.vn.' + '</p>';
 			html += '	</div>';
 			html += '</div>';
 			$('#id_backlink_link'+idx).focus();
@@ -242,7 +242,7 @@
 		if(id_backlink_link == ''){
 			var html = '<div class="notice">';
 			html += '	<div class="error">';
-			html += '		<p>' + 'Please input backlink of www.youtubesub.com.' + '</p>';
+			html += '		<p>' + 'Please input backlink of www.nhapholocphat.vn.' + '</p>';
 			html += '	</div>';
 			html += '</div>';
 			$('#id_backlink_link'+idx).focus();
@@ -632,7 +632,7 @@
 	<table class="table-list_edit">
 		<caption>Backlink - Hãy tạo backlink cho trang web này, bạn sẽ được sử dụng miễn phí.
 		<br>
-		<a href="http://www.youtubesub.com/news?id=55495&Cach_tao_backlink">Hướng dẫn tạo backlink </a>, hoặc đơn giản là share trang này lên facebook, g+. 
+		<a href="http://www.nhapholocphat.vn/news?id=55495&Cach_tao_backlink">Hướng dẫn tạo backlink </a>, hoặc đơn giản là share trang này lên facebook, g+. 
 		</caption>
 		<thead>
 			<tr>

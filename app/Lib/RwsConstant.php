@@ -16,7 +16,7 @@ class RwsConstant {
 	 * Config EMAIL
 	 */
 	const EMAIL_CONFIG = 'admin_gmail';
-	const FROM_ADDRESS = 'support@youtubesub.com';
+	const FROM_ADDRESS = 'support@nhapholocphat.vn';
 	
 	// Config COOKIE
 	const COOKIE_NAME = 'rwsCookie';

@@ -3,8 +3,8 @@
 <head>
 <link rel="icon" type="image/x-icon"
 	href="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/favicon.ico">
-<link rel="alternate" href="http://www.youtubesub.com/?hl=vn" hreflang="vi-vn" />
-<link rel="alternate" href="http://www.youtubesub.com/?hl=ja" hreflang="<?php echo $language;?>" />
+<link rel="alternate" href="http://www.nhapholocphat.vn/?hl=vn" hreflang="vi-vn" />
+<link rel="alternate" href="http://www.nhapholocphat.vn/?hl=ja" hreflang="<?php echo $language;?>" />
 <title><?php echo $title;?></title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,28 +12,28 @@
 	if(isset($this->params['controller']) && $this->params['controller'] == 'news'){
 		if(isset($news['TNews']['TITLE'])){
 			echo '<META name="description"
-				content="'.$news['TNews']['TITLE'].' - YoutubeSub">';
+				content="'.$news['TNews']['TITLE'].' - Nhà phố lộc phát">';
 			echo '<META name="keywords"
-			CONTENT="'.$news['TNews']['TITLE'].' - News, Video, Youtubesub, Tin tức, giải trí">';
+			CONTENT="'.$news['TNews']['TITLE'].' - Bán nhà, định giá nhà, tư vấn mua nhà chuyên nghiệp">';
 		} else {
 			echo '<META name="description"
-				content="News, Video - YoutubeSub">';
+				content="Nhà phố Sài Gòn, tư vấn nhà đất, định giá nhà đất">';
 			echo '<META name="keywords"
-			CONTENT="News, Video, Youtubesub, Tin tức, giải trí">';
+			CONTENT="Định giá nhà, định giá đất, tư vấn nhà đất, cò nhà đất, nhà sài gòn">';
 		}
 	}
 	else{
 		?>
 		<META name=”description”
-			content="News, Video, Entertainment, Manage video's youtube on youman. Thời sự, tin tức, giải trí. Quản lý video youtube">
+			content="Tổng hợp các tin tức nhà đất, tư vấn chuyên nghiệp nhà phố, hướng dẫn các thủ tục pháp lý mua bán nhà">
 		<META name="keywords"
-			CONTENT="News, Video, youman, youtubesub, entertainment, daily mail , nhk, tin tức, giải trí">	
+			CONTENT="Mua nhà, bán nhà, nhà phố sài gòn, định giá nhà đất, tin tức nhà đất, tư vấn mua nhà, tư vấn bán nhà">	
 		<?php 
 	}
 ?>
 <META http-equiv="content-language" content="<?php echo $language;?>" />
 <META name="Language" CONTENT="<?php echo $language;?>">
-<META name="Author" CONTENT="YOUMAN, admin@youtubesub.com">
+<META name="Author" CONTENT="admin, admin@nhapholocphat.vn">
 
 <META name="robots" CONTENT="index, follow">
 <META name="msnbot" CONTENT="NOODP">
@@ -74,7 +74,7 @@
 ?>
 <!-- Start Alexa Certify Javascript -->
 <script type="text/javascript">
-_atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"youtubesub.com",dynamic: true};
+_atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"nhapholocphat.vn",dynamic: true};
 (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "/js/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
 </script>
 <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=OW6Wl1aU8KL3/9" style="display:none" height="1" width="1" alt="" /></noscript>
@@ -164,8 +164,8 @@ _atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"youtubesub.com",dynamic: true
 					<div class="yt-masthead-logo-container ">
 						<a id="logo-container"
 							href="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>"
-							title="YoutubeSub News & Video - Youman"> <img
-							alt="www.YouTubeSub.com"
+							title="Mua bán nhà phố - Tư vấn pháp lý"> <img
+							alt="www.nhapholocphat.vn"
 							src="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>/img/subicon.png"
 							height="32px" width="68px"><span class="content-region"><?php echo $language;?> </span></a>
 						<?php if ($this->Session->check(RwsConstant::SESSION_LOGIN_USER_KEY)) {?>
@@ -462,7 +462,7 @@ _atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"youtubesub.com",dynamic: true
 													href="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/action/find"
 													title="Search"> <span class="yt-valign-container"> <span
 															class="thumb guide-my-subscriptions-icon yt-sprite"></span>
-															<span class="display-name  no-count"> <span> Tìm </span>
+															<span class="display-name  no-count"> <span> Xác nhận tin đăng </span>
 														</span>
 													</span>
 												</a></li>
@@ -518,79 +518,30 @@ _atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"youtubesub.com",dynamic: true
 						
 							<?php if (!$this->Session->check(RwsConstant::SESSION_LOGIN_USER_KEY)) {?>
 							<div id="content-adv" class="content-alignment-advertisement">
+								
 								<div class="recommended">
-									<h2>Sponsor Youman</h2>
-								</div>
-								<?php if($language == RwsConstant::LANGUAGE_VN) { ?>
-								<div class="recommended_app">
-										<a TARGET="_blank" href="https://play.google.com/store/apps/details?id=com.macgia.doveso">
-										<img width='140px'
-											src="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/img/partner/vedo_150x150.png">
-										</a>
-										<a TARGET="_blank" href="https://play.google.com/store/apps/details?id=com.macgia.doveso">
-											Vé dò - Android app
-										</a>
-								</div>
-								<?php } else {?>
-									<?php }?>
-								<div class="recommended_app">
-									<a TARGET="_blank" href="https://play.google.com/store/apps/details?id=com.game.coganh">
-									<img width='140px'
-										src="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/img/partner/co_ganh150x150.png">
-									</a>
-									<a TARGET="_blank" href="https://play.google.com/store/apps/details?id=com.game.coganh">
-										Cờ gánh - Android game 
-									</a>
-								</div>
-								<div class="recommended_app">
-									<a TARGET="_blank" href="https://play.google.com/store/apps/details?id=com.itme.encodetext">
-									<img width='140px'
-										src="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/img/partner/Encoder_Pro_Android.png">
-									</a>
-									<a TARGET="_blank" href="https://play.google.com/store/apps/details?id=com.itme.encodetext">
-										Encoder Pro - Android app
-									</a>
-								</div>
-								<?php //if($language == RwsConstant::LANGUAGE_VN) { ?>
-								<div class="recommended">
-									<h2><a TARGET="_blank" href="http://www.hanghieusile.com">Hàng hiệu bình dân giá sỉ</a></h2>
+									<h2><a TARGET="_blank" href="http://www.hanghieubinhdan.com">Hàng hiệu bình dân giá sỉ</a></h2>
 								</div>
 								<div>
-									<a TARGET="_blank" href="http://www.hanghieusile.com">
-									<img width='300px' alt='Hàng hiệu bình dân giá sỉ'
+									<a TARGET="_blank" href="http://www.hanghieubinhdan.com">
+									<img width='300px' alt='Hàng hiệu bình dân - TrinhVenus'
 										src="https://media.giphy.com/media/ZWgSwXqsJdAze/giphy.gif">
 									</a>
 
-								<div class="fb-page" data-href="https://www.facebook.com/hanghieubinhdan.trinhvenus2015/" data-tabs="timeline" data-width="300" data-height="640" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/hanghieubinhdan.trinhvenus2015/"><a href="https://www.facebook.com/hanghieubinhdan.trinhvenus2015/">Hàng hiệu bình đân</a></blockquote></div></div>
+									<div class="fb-page" data-href="https://www.facebook.com/hanghieubinhdanXT" data-tabs="timeline" data-width="300" data-height="640" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/hanghieubinhdanXT"><a href="https://www.facebook.com/hanghieubinhdanXT">Hàng hiệu bình đân</a></blockquote></div>
+									</div>
 								</div>
 								
-								<div class="recommended">
-									<h2><a TARGET="_blank" href="http://goo.gl/xM0oW2">Săn vé máy bay giá rẻ</a></h2>
-								</div>
-								<div>
-									<a TARGET="_blank" href="http://goo.gl/xM0oW2">
-									<img width='300px' alt='Săn vé máy bay giá rẻ'
-										src="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/img/partner/SanVeMayBayGiaRe.png">
-									</a>
-								</div>
-								
-								<?php //}?>
-
 								<div class="recommended">
 									<h2>News links</h2>
 								</div>
 								<div>
-									News Video , daily mail , mail online , rola misaki , kyle dube , mail , cnn , dailymail , daily
+									Bat dong san, Bất động sản, cò nhà đất, cò nhà, giới thiệu nhà đất
 									<br>
-									vnexpress , doc bao, baomoi , bao dan tri , tin tuc zing , xaluan , viet bao , tin tuc viet nam , dantri
+									dữ liệu nhà phố, đất sài gòn, nhà phố xác minh, nhà phố Sài Gòn
 									<br>
-									nhk , ま れ , nhk 番 組 表 , マ ッ サ ン , 花 燃 ゆ , ブ ラ タ モ リ , nhkg n , ベ イ ビ ー ス テ ッ プ , ら じ る ら じ る , 歴 史 秘 話 ヒ ス ト リ ア , nhk 受 信 料	 , ロ グ ホ ラ イ ズ ン , nhk tin tức
+									Định giá nhà đất, định giá nhà phố, bán nhà phố, bán nhà sài gòn
 									<br>
-								</div>
-								<div>
-									<a TARGET="_blank" href="http://fcounter.info/more/zsDj"><img
-										src="http://fcounter.info/count/zsDj/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_30/viewers_0/labels_1/pageviews_1/flags_0/"
-										alt="Flag Counter" border="0"></a>
 								</div>
 							</div>
 							<?php }?>
@@ -610,7 +561,6 @@ _atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"youtubesub.com",dynamic: true
 			<?php
 				$requestUri = str_replace("hl=".RwsConstant::LANGUAGE_VN, "", $_SERVER['REQUEST_URI']);
 				$requestUri = str_replace("hl=".RwsConstant::LANGUAGE_EN, "", $requestUri);
-				$requestUri = str_replace("hl=".RwsConstant::LANGUAGE_JA, "", $requestUri); 
 				if($requestUri=='/'){
 					$requestUri = $requestUri . '?';
 				} else if($requestUri != '/?'){
@@ -628,16 +578,13 @@ _atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"youtubesub.com",dynamic: true
 							if(isset($this->params['controller']) && in_array($this->params['controller'],$notlanguage)){							
 								if($language == RwsConstant::LANGUAGE_VN){
 									echo 'Việt Nam';
-								} else if($language == RwsConstant::LANGUAGE_JA){
-									echo '日本語';
-								} else{
+								} else if($language == RwsConstant::LANGUAGE_EN){
 									echo 'English';
 								}
 							} else {
 								?>
 									<a href='<?php echo "http://$_SERVER[HTTP_HOST]$requestUri" . 'hl=' . RwsConstant::LANGUAGE_EN; ?>'>English</a> |
-									<a href='<?php echo "http://$_SERVER[HTTP_HOST]$requestUri" . 'hl=' . RwsConstant::LANGUAGE_VN; ?>'>Việt Nam</a> |
-									<a href='<?php echo "http://$_SERVER[HTTP_HOST]$requestUri" . 'hl=' . RwsConstant::LANGUAGE_JA; ?>'>日本語</a>
+									<a href='<?php echo "http://$_SERVER[HTTP_HOST]$requestUri" . 'hl=' . RwsConstant::LANGUAGE_VN; ?>'>Việt Nam</a>
 								<?php 
 							}
 						?>

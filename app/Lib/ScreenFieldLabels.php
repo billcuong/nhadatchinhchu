@@ -79,15 +79,15 @@ class ScreenFieldLabels {
 			'HOME_CATALOG_001' => 'Được đề xuất',
 			'HOME_CATALOG_002' => 'Phim',
 			'HOME_CATALOG_003' => 'Video clips',
-			'HOME_CATALOG_004' => 'Tin tức thế giới',
-			'HOME_CATALOG_005' => 'Tin tức giải trí',
+			'HOME_CATALOG_004' => 'Tin tức nhà bán',
+			'HOME_CATALOG_005' => 'Tin tức nhà thuê',
 			
 			'HOME_CATALOG_NOTE_001' => 'tin mới nhất',
 			
 			//Menu
 			'SCR_MENU_ADMIN' => 'Chỉnh sửa người dùng',
-			'SCR_MENU_SUBSCRIPTION' => 'Theo dõi Youtube',
-			'SCR_MENU_REUP' => 'Video reup',
+			'SCR_MENU_SUBSCRIPTION' => 'Video theo dõi Youtube',
+			'SCR_MENU_REUP' => 'Video nhà cộng tác viên',
 			'SCR_MENU_SEARCH' => 'Tìm videos bằng api',
 			'SCR_MENU_SEARCH_YT' => 'Tìm videos youtube',
 			'SCR_MENU_SEO_TOP' => 'Seo top web/youtube',
@@ -243,7 +243,7 @@ class ScreenFieldLabels {
 			//Menu
 			'SCR_MENU_ADMIN' => '編集ユーザー ',
 			'SCR_MENU_SUBSCRIPTION' => 'サブスクリプション ',
-			'SCR_MENU_REUP' => 'Video reup',
+			'SCR_MENU_REUP' => 'Video My home',
 			'SCR_MENU_SEARCH' => '検索動画API',
 			'SCR_MENU_SEARCH_YT' => '検索動画Youtube',
 			'SCR_MENU_SEO_TOP' => 'Seo top web/youtube',
@@ -401,7 +401,7 @@ class ScreenFieldLabels {
 			//Menu
 			'SCR_MENU_ADMIN' => 'Edit user',
 			'SCR_MENU_SUBSCRIPTION' => 'Subscriptions',
-			'SCR_MENU_REUP' => 'Video reup',
+			'SCR_MENU_REUP' => 'Video My home',
 			'SCR_MENU_SEARCH' => 'Search videos with api',
 			'SCR_MENU_SEARCH_YT' => 'Search videos youtube',
 			'SCR_MENU_SEO_TOP' => 'Seo top web/youtube',

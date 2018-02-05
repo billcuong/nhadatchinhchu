@@ -47,9 +47,9 @@ class EmailConfig {
 // 	);
 
 	public $admin_gmail = array(
-			'host' => 'mail.youtubesub.com',
+			'host' => 'mail.nhapholocphat.vn',
 			'port' => 25,
-			'username' => 'support@youtubesub.com',
+			'username' => 'support@nhapholocphat.vn',
 			'password' => 'sp123!@#!@',
 			'transport' => 'Smtp',
 			'charset' => 'utf-8',

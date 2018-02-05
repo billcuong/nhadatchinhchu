@@ -127,7 +127,7 @@ function fnc_doRemoveVideoFromHomepage(){
             <td><img class="img-thumbnail" src="<?php echo $video['TVideo']['THUMBNAILS'];?>" style="max-width:inherit;width:90px"></td>
 			<td><a target="_blank" title="<?php echo $video['TVideo']['TITLE'];?>" href="<?php echo RwsConstant::FULL_BASE_URL_HOST.'/watch?v='.$video['TVideo']['VIDEO_ID'];?>"><?php echo $video['TVideo']['TITLE'];?></a></td>
 			<td><a target="_blank" title="<?php  echo $video['TVideo']['CHANNEL_TITLE']; ?>" href="<?php echo RwsConstant::FULL_BASE_URL_HOST. '/channel/' . $video['TVideo']['CHANNEL_ID'];?>"><?php  if(strlen($video['TVideo']['CHANNEL_TITLE']) == 0){ echo $video['TVideo']['CHANNEL_ID']; }else{ echo $video['TVideo']['CHANNEL_TITLE'];} ?></a></td>
-            <td><?php echo isset($video['TVideo']['ATTRIBUTION']) ? $video['TVideo']['ATTRIBUTION'] . $ga : "Only Vip Account"; //echo getMetaAttribution("http://www.youtubesub.com/watch?v=".$searchResult['id']);?></td>
+            <td><?php echo isset($video['TVideo']['ATTRIBUTION']) ? $video['TVideo']['ATTRIBUTION'] . $ga : "Only Vip Account"; //echo getMetaAttribution("http://www.nhapholocphat.vn/watch?v=".$searchResult['id']);?></td>
 			<td><?php 
 				if(strlen($video['TVideo']['REJECTION_REASON']) == 0){
 					echo "Bình Thường";

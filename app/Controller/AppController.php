@@ -82,7 +82,7 @@ class AppController extends Controller {
 		}
 		// Set data for VIEW
 		if(!isset($this->title)){
-			$this->title = "News & Video - Youman";
+			$this->title = "Mua bán nhà phố - Tư vấn mua bán nhà";
 		}
 		$this->set('title_for_layout', $this->title);
 		if (!empty($this->errors)) {
@@ -94,7 +94,7 @@ class AppController extends Controller {
 		$this->set('scrFieldLabels', $this->scrFieldLabels);
 		$this->set('messageList', $this->messages);
 		$this->set('urlHistories', $this->urlHistories);
-		if($this->title == "News & Video - Youman"){
+		if($this->title == "Mua bán nhà phố - Tư vấn mua bán nhà"){
 			$this->set('title',$this->title);
 		}
 		else{

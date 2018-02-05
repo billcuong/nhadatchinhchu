@@ -3,18 +3,18 @@
 <head>
 <link rel="icon" type="image/x-icon"
 	href="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/favicon.ico">
-<link rel="alternate" href="http://www.youtubesub.com/?hl=vn" hreflang="vi-vn" />
-<link rel="alternate" href="http://www.youtubesub.com/?hl=ja" hreflang="<?php echo $language;?>" />
+<link rel="alternate" href="http://www.nhapholocphat.vn/?hl=vn" hreflang="vi-vn" />
+<link rel="alternate" href="http://www.nhapholocphat.vn/?hl=ja" hreflang="<?php echo $language;?>" />
 <title><?php echo $title;?></title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="content-language" content="en" />
-<meta name=”description”
-	content="News, Video, Entertainment, Video youtube manage with youman. Thời sự , giải trí tổng hợp, video. Quản lý video youtube, News Video , daily mail">
+<META name=”description”
+			content="Tổng hợp các tin tức nhà đất, tư vấn chuyên nghiệp nhà phố, hướng dẫn các thủ tục pháp lý mua bán nhà">
 <META name="Language" CONTENT="english">
-<META name="Author" CONTENT="YOUMAN, admin@youtubesub.com">
+<META name="Author" CONTENT="admin, admin@nhapholocphat.com">
 <META name="keywords"
-	CONTENT="News, Video, Entertainment, Video youtube manage with youman, Quản lý video youtube, News Video">
+			CONTENT="Mua nhà, bán nhà, nhà phố sài gòn, định giá nhà đất, tin tức nhà đất, tư vấn mua nhà, tư vấn bán nhà">
 <META name="robots" CONTENT="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=0.66">
 <META name="Title" CONTENT="<?php echo $title;?>">
@@ -133,8 +133,8 @@
 					<div class="yt-masthead-logo-container ">
 						<a id="logo-container"
 							href="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>"
-							title="YoutubeSub News & Video - Youman"> <img
-							alt="www.YouTubeSub.com"
+							title="Mua bán nhà phố - Tư vấn pháp lý"> <img
+							alt="www.nhapholocphat.vn"
 							src="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>/img/subicon.png"
 							height="32px" width="68px"><span class="content-region"><?php echo $language;?> </span></a>
 						<?php if (isset($user_id_login)) {?>
@@ -430,7 +430,7 @@
 													href="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/action/find"
 													title="Search"> <span class="yt-valign-container"> <span
 															class="thumb guide-my-subscriptions-icon yt-sprite"></span>
-															<span class="display-name  no-count"> <span> Tìm </span>
+															<span class="display-name  no-count"> <span> Xác nhận tin đăng </span>
 														</span>
 													</span>
 												</a></li>
@@ -489,7 +489,6 @@
 			<?php
 				$requestUri = str_replace("hl=".RwsConstant::LANGUAGE_VN, "", $_SERVER['REQUEST_URI']);
 				$requestUri = str_replace("hl=".RwsConstant::LANGUAGE_EN, "", $requestUri);
-				$requestUri = str_replace("hl=".RwsConstant::LANGUAGE_JA, "", $requestUri); 
 				if($requestUri=='/'){
 					$requestUri = $requestUri . '?';
 				} else if($requestUri != '/?'){
@@ -507,16 +506,13 @@
 							if(isset($this->params['controller']) && in_array($this->params['controller'],$notlanguage)){							
 								if($language == RwsConstant::LANGUAGE_VN){
 									echo 'Việt Nam';
-								} else if($language == RwsConstant::LANGUAGE_JA){
-									echo '日本語';
-								} else{
+								} else if($language == RwsConstant::LANGUAGE_EN){
 									echo 'English';
 								}
 							} else {
 								?>
 									<a href='<?php echo "http://$_SERVER[HTTP_HOST]$requestUri" . 'hl=' . RwsConstant::LANGUAGE_VN; ?>'>Việt Nam</a>
 									<a href='<?php echo "http://$_SERVER[HTTP_HOST]$requestUri" . 'hl=' . RwsConstant::LANGUAGE_EN; ?>'>English</a>
-									<a href='<?php echo "http://$_SERVER[HTTP_HOST]$requestUri" . 'hl=' . RwsConstant::LANGUAGE_JA; ?>'>日本語</a>
 								<?php 
 							}
 						?>

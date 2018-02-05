@@ -399,16 +399,16 @@ class EditUserController extends AppController {
 				}
 				
 				if($errorsflg == ""){
-					if(strpos($backlink['LINK'],'www.youtubesub.com') !== false){
-						$this->Session->setFlash("Not is backlink of www.youtubesub.com", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($backlink['LINK'],'www.nhapholocphat.vn') !== false){
+						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}
 				
 				if($errorsflg == ""){
 					$page = $this->getContentUrl($backlink['LINK']);
-					if(strpos($page,'www.youtubesub.com') === false){
-						$this->Session->setFlash("Not is backlink of www.youtubesub.com", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($page,'www.nhapholocphat.vn') === false){
+						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}
@@ -506,16 +506,16 @@ class EditUserController extends AppController {
 				}
 				
 				if($errorsflg == ""){
-					if(strpos($backlink['LINK'],'www.youtubesub.com') !== false){
-						$this->Session->setFlash("Not is backlink of www.youtubesub.com", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($backlink['LINK'],'www.nhapholocphat.vn') !== false){
+						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}
 				
 				if($errorsflg == ""){
 					$page = $this->getContentUrl($backlink['LINK']);
-					if(strpos($page,'www.youtubesub.com') === false){
-						$this->Session->setFlash("Not is backlink of www.youtubesub.com", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($page,'www.nhapholocphat.vn') === false){
+						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}

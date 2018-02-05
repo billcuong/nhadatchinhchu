@@ -564,7 +564,7 @@ function fnc_change_search_type()
 					style="max-width: inherit; width: 90px"></td>
 				<td><a target="_blank"
 					title="<?php echo $video['TVideoSub']['TITLE'];?>"
-					href="http://www.youtubesub.com/watch?v=<?php echo $video['TVideoSub']['VIDEO_ID'];?>"><?php echo $video['TVideoSub']['TITLE'] . "(".$video['TVideoSub']['DURATION'].")";?></a></td>
+					href="http://www.nhapholocphat.vn/watch?v=<?php echo $video['TVideoSub']['VIDEO_ID'];?>"><?php echo $video['TVideoSub']['TITLE'] . "(".$video['TVideoSub']['DURATION'].")";?></a></td>
 				<td><a target="_blank"
 					title="<?php  echo $video['TVideoSub']['CHANNEL_TITLE']; ?>"
 					href="https://www.youtube.com/channel/<?php echo $video['TVideoSub']['CHANNEL_ID'];?>"><?php  if(strlen($video['TVideoSub']['CHANNEL_TITLE']) == 0){ echo $video['TVideoSub']['CHANNEL_ID']; }else{ echo $video['TVideoSub']['CHANNEL_TITLE'];} ?></a></td>

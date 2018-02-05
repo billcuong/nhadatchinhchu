@@ -8,7 +8,7 @@
 <meta name="description" content="The system videos Youtube manage, Hệ thống quản lý video in youtube.">
 <title><?php echo $title;?></title>
 <meta name="Language" CONTENT="english">
-<meta name="Author" CONTENT="YOUMAN, admin@youtubesub.com">
+<meta name="Author" CONTENT="YOUMAN, admin@nhapholocphat.vn">
 <meta name="keywords" CONTENT="Login, Video, News, Entertainment, Video youtube manage, Thời sự tổng hợp, giải trí, Quản lý video youtube">
 <meta name="robots" CONTENT="nofollow">
   <?php 

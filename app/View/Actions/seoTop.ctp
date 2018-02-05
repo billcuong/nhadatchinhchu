@@ -16,12 +16,12 @@ function fnc_change_search_type()
 	if($('#select_search_type').val() == '1'){
 		$('#id_search_youtube_1').css("display","none");
 		$('#id_search_youtube_2').css("display","none");
-		$('#id_your_url').attr('placeholder','www.youtubesub.com');
+		$('#id_your_url').attr('placeholder','www.nhapholocphat.vn');
 	}
 	else{
 		$('#id_search_youtube_1').css("display","");
 		$('#id_search_youtube_2').css("display","");
-		$('#id_your_url').attr('placeholder','www.youtubesub.com/watch?v=G2N0s2CTBBE');
+		$('#id_your_url').attr('placeholder','www.nhapholocphat.vn/watch?v=G2N0s2CTBBE');
 	}
 }
 function fnc_SearchSubmit(){
@@ -78,7 +78,7 @@ function fnc_SearchSubmit(){
 	<tr>
 		<td><?php echo $scrFieldLabels['SCR_SEOTOP_YOUR_KEY'];?></td>
 		<td colspan="3"><input type="text" id="id_your_url" name="yourUrl"
-			class="inputUrl" placeholder="www.youtubesub.com/watch?v=G2N0s2CTBBE"
+			class="inputUrl" placeholder="www.nhapholocphat.vn/watch?v=G2N0s2CTBBE"
 			value="<?php echo (isset($yourUrl) ? $yourUrl : ''); ?>"></td>
 			
 		<td><?php echo $scrFieldLabels['SCR_SEOTOP_TOP_SEARCH'];?></td>
