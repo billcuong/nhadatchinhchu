@@ -72,13 +72,6 @@
 		array('async' => 'async')
 	);
 ?>
-<!-- Start Alexa Certify Javascript -->
-<script type="text/javascript">
-_atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"nhapholocphat.vn",dynamic: true};
-(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "/js/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
-</script>
-<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=OW6Wl1aU8KL3/9" style="display:none" height="1" width="1" alt="" /></noscript>
-<!-- End Alexa Certify Javascript --> 
 
 <script>
 
@@ -525,11 +518,8 @@ _atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"nhapholocphat.vn",dynamic: tr
 								<div>
 									<a TARGET="_blank" href="http://www.hanghieubinhdan.com">
 									<img width='300px' alt='Hàng hiệu bình dân - TrinhVenus'
-										src="https://media.giphy.com/media/ZWgSwXqsJdAze/giphy.gif">
+										src="http://www.hanghieubinhdan.com/wp-content/uploads/2018/01/cropped-logo-hangieubinhdan.png">
 									</a>
-
-									<div class="fb-page" data-href="https://www.facebook.com/hanghieubinhdanXT" data-tabs="timeline" data-width="300" data-height="640" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/hanghieubinhdanXT"><a href="https://www.facebook.com/hanghieubinhdanXT">Hàng hiệu bình đân</a></blockquote></div>
-									</div>
 								</div>
 								
 								<div class="recommended">
@@ -595,15 +585,6 @@ _atrk_opts = { atrk_acct:"OW6Wl1aU8KL3/9", domain:"nhapholocphat.vn",dynamic: tr
 			</div>
 		</div>
 	</div>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 	<?php //echo $this->element('sql_dump'); ?>
 </body>
