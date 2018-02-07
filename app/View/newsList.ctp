@@ -25,7 +25,7 @@
 		$user_id_login = $this->Session->read(RwsConstant::SESSION_LOGIN_USER_KEY);
 		$login_user_role = 0 + $this->Session->read('login.user.AUTH_ROLE');
 	}
-	echo "<a href='".RwsConstant::FULL_BASE_URL_HOST."'>Youtubesub</a>";
+	echo "<a href='".RwsConstant::FULL_BASE_URL_HOST."'>Nhà phố Lộc Phát</a>";
 	
 	if(isset($newsList)){
 		if($newsList[0]['TRssNews']['TYPE'] == RwsConstant::NEWS_ITEM_TYPE_HOT){

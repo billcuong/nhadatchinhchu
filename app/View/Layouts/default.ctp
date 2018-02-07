@@ -180,7 +180,7 @@
 						<div id="appbar-main-guide-notification-container"></div>
 					</div>
 					<div id="yt-masthead-user" class="yt-uix-clickcard">
-						<span title="Looking for youtubesub.">
+						<span title="Looking for nhapholocphat.vn">
 							<?php
 							if (isset($user_id_login)) { 
 							 	echo $user_id_login;

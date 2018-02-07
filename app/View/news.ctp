@@ -1,7 +1,7 @@
 <div class="recommended">
 <h2>
 	<?php 
-	echo "<a href='".RwsConstant::FULL_BASE_URL_HOST."'>YoutubeSub</a>";
+	echo "<a href='".RwsConstant::FULL_BASE_URL_HOST."'>Nhà phố Lộc Phát</a>";
 	if(isset($news)){
 		if($news['TRssNews']['TYPE'] == RwsConstant::NEWS_ITEM_TYPE_HOT){
 			echo " > "; 

@@ -98,7 +98,7 @@ class AppController extends Controller {
 			$this->set('title',$this->title);
 		}
 		else{
-			$this->set('title',$this->title . " - YoutubeSub");
+			$this->set('title',$this->title);
 		}
 		
 		// Set LAYOUT depend on APP_MODE: HTML, Developer or Release
@@ -237,7 +237,7 @@ class AppController extends Controller {
 			case "JA":
 				return RwsConstant::LANGUAGE_JA;
 			default:
-				return RwsConstant::LANGUAGE_EN;
+				return RwsConstant::LANGUAGE_VN;
 		}
 	}
 
@@ -250,7 +250,7 @@ class AppController extends Controller {
 			case RwsConstant::LANGUAGE_JA:
 				return "JA";
 			default:
-				return "US";
+				return "VN";
 		}
 	}
 

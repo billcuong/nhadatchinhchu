@@ -7,7 +7,7 @@
 	<div class="banner">
 		<div class="yt-masthead-logo-container ">
 			<a id="logo-container" href="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>"
-				title="YouTube home"> <img alt="YoutubeSub Home"
+				title="Nhà phố Lộc Phát"> <img alt="Nhà phố Lộc Phát"
 				src="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>/img/subicon.png"
 				height="64px" width="200px"></a>		
 		</div>
