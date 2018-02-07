@@ -5,7 +5,7 @@
 	</p>
 	<p>
 		<span style="color: rgb(86, 86, 86);">Design by </span> <a
-			href="www.nhapholocphat.vn" target="_blank"> <span
+			href="<?php echo RwsConstant::FULL_BASE_URL_HOST; ?>" target="_blank"> <span
 			style="color: rgb(86, 86, 86);"><strong>Youman Group</strong></span>
 		</a>
 	</p>

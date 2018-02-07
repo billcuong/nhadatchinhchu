@@ -3,8 +3,8 @@
 <head>
 <link rel="icon" type="image/x-icon"
 	href="<?php echo RwsConstant::FULL_BASE_URL_HOST?>/favicon.ico">
-<link rel="alternate" href="http://www.nhapholocphat.vn/?hl=vn" hreflang="vi-vn" />
-<link rel="alternate" href="http://www.nhapholocphat.vn/?hl=ja" hreflang="<?php echo $language;?>" />
+<link rel="alternate" href="<?php echo RwsConstant::FULL_BASE_URL_HOST; ?>/?hl=vn" hreflang="vi-vn" />
+<link rel="alternate" href="<?php echo RwsConstant::FULL_BASE_URL_HOST; ?>/?hl=ja" hreflang="<?php echo $language;?>" />
 <title><?php echo $title;?></title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -158,8 +158,8 @@
 						<a id="logo-container"
 							href="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>"
 							title="Mua bán nhà phố - Tư vấn pháp lý"> <img
-							alt="www.nhapholocphat.vn"
-							src="<?php echo RwsConstant::FULL_BASE_URL_HOST;?>/img/subicon.png"
+							alt="<?php echo RwsConstant::FULL_BASE_URL_HOST; ?>"
+							src="<?php echo RwsConstant::FULL_BASE_URL_HOST; ?>/img/subicon.png"
 							height="32px" width="68px"><span class="content-region"><?php echo $language;?> </span></a>
 						<?php if ($this->Session->check(RwsConstant::SESSION_LOGIN_USER_KEY)) {?>
 						<div id="appbar-guide-button-container">
@@ -180,7 +180,7 @@
 						<div id="appbar-main-guide-notification-container"></div>
 					</div>
 					<div id="yt-masthead-user" class="yt-uix-clickcard">
-						<span title="Looking for nhapholocphat.vn">
+						<span title="Looking for <?php echo RwsConstant::FULL_BASE_URL_HOST; ?>">
 							<?php
 							if (isset($user_id_login)) { 
 							 	echo $user_id_login;

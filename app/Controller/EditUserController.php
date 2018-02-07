@@ -399,16 +399,16 @@ class EditUserController extends AppController {
 				}
 				
 				if($errorsflg == ""){
-					if(strpos($backlink['LINK'],'www.nhapholocphat.vn') !== false){
-						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($backlink['LINK'], RwsConstant::FULL_BASE_URL_HOST) !== false){
+						$this->Session->setFlash("Not is backlink of " . RwsConstant::FULL_BASE_URL_HOST, 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}
 				
 				if($errorsflg == ""){
 					$page = $this->getContentUrl($backlink['LINK']);
-					if(strpos($page,'www.nhapholocphat.vn') === false){
-						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($page, RwsConstant::FULL_BASE_URL_HOST) === false){
+						$this->Session->setFlash("Not is backlink of " . RwsConstant::FULL_BASE_URL_HOST, 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}
@@ -506,16 +506,16 @@ class EditUserController extends AppController {
 				}
 				
 				if($errorsflg == ""){
-					if(strpos($backlink['LINK'],'www.nhapholocphat.vn') !== false){
-						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($backlink['LINK'],RwsConstant::FULL_BASE_URL_HOST) !== false){
+						$this->Session->setFlash("Not is backlink of " . RwsConstant::FULL_BASE_URL_HOST, 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}
 				
 				if($errorsflg == ""){
 					$page = $this->getContentUrl($backlink['LINK']);
-					if(strpos($page,'www.nhapholocphat.vn') === false){
-						$this->Session->setFlash("Not is backlink of www.nhapholocphat.vn", 'message', array('message_type' => RwsConstant::MSG_ERROR));
+					if(strpos($page,RwsConstant::FULL_BASE_URL_HOST) === false){
+						$this->Session->setFlash("Not is backlink of " . RwsConstant::FULL_BASE_URL_HOST, 'message', array('message_type' => RwsConstant::MSG_ERROR));
 						$errorsflg = "true";
 					}
 				}

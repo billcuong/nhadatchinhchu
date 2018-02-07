@@ -293,7 +293,7 @@ class CreateUserController extends AppController {
 					// Get Parameters
 					$params['advice_mail_to'] = $email;
 					$params['advice_mail_title'] = "Change pass";
-					$params['advice_mail_body'] = "Bạn hoặc ai đó đã yêu cầu đổi mật khẩu trên trang www.nhapholocphat.vn. Nhấp vào link sau để thay đổi pass : ";
+					$params['advice_mail_body'] = "Bạn hoặc ai đó đã yêu cầu đổi mật khẩu trên trang " . RwsConstant::FULL_BASE_URL_HOST . " . Nhấp vào link sau để thay đổi pass : ";
 					$params['advice_sender'] = "Admin Youman";
 				
 					if (!defined('MD5_SALT')) {
