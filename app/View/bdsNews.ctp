@@ -1,4 +1,4 @@
-<div class="form-editor">
+<?php echo $this->Form->create('BDSNews', array('url' => array ('controller' => 'createBDSNews', 'action' => 'doAddBDSNews'), 'role' => 'form', 'novalidate' => true)); ?>
 
             <input type="hidden" value="2166882" name="PropertyId" id="PropertyId">
 
@@ -20,27 +20,52 @@
         </div>
     </header>
     <article>
+        <br>
         <div class="form-horizontal pull-left">
             <!-- LastInfoFromUser -->
             <div class="control-group">
                 <label class="control-label">Nguồn:</label>
                 <div class="controls">
-                    <div class="select2-container text text-box select2-allowclear" id="s2id_LastInfoFromUserId"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-1">Tu Anh</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen1_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-1">   </ul></div></div><input class="text text-box select2-user select2-group-user" group="1580848" id="LastInfoFromUserId" name="LastInfoFromUserId" placeholder="-- Nguồn --" type="text" value="1667444" tabindex="-1" title="" style="display: none;">
-                    
-
-                    
+                    <select id="FlagCssClass" name="FlagCssClass">
+                        <?php
+                            foreach ($customerlist as $customer){
+                        ?>
+                        <option 
+                            <?php 
+                                if(isset($dbdNews['BDS_NEWS']['USER_ID'])){
+                                    if($dbdNews['BDS_NEWS']['USER_ID'] == $customer['TCustomer']['USER_ID']){
+                                        echo 'selected="selected"';
+                                    }
+                                }
+                            ?>
+                            value="<?php echo $customer['TCustomer']['USER_ID'] ?>"><?php echo $customer['TCustomer']['CUSTOMER_NAME'] ?></option>
+                        <?php
+                            }
+                        ?>
+                    </select>
                 </div>
             </div>
             <!-- Flag -->
             <div class="control-group">
                 <label class="control-label">Đánh dấu:</label>
                 <div class="controls">
-                    <select class="deal-good" id="FlagCssClass" name="FlagCssClass"><option selected="selected" value="deal-good">Nhà rẻ</option>
-<option value="deal-very-good">Nhà rất rẻ</option>
-<option value="deal-normal">Bình thường</option>
-<option value="deal-unknow">Chưa định giá được</option>
-<option value="deal-bad">Nhà giá cao</option>
-</select>
+                    <select class="deal-good" id="FlagCssClass" name="FlagCssClass">
+                        <?php
+                            foreach ($danhDaulist as $danhDau){
+                        ?>
+                            <option 
+                                <?php 
+                                    if(isset($dbdNews['BDS_NEWS']['EVALUATE_CODE'])){
+                                        if($dbdNews['BDS_NEWS']['EVALUATE_CODE'] == $danhDau['DanhDau']['EVALUATE_CODE']){
+                                            echo 'selected="selected"';
+                                        }
+                                    }
+                                ?>
+                                value="<?php echo $danhDau['DanhDau']['EVALUATE_CODE'] ?>"><?php echo $danhDau['DanhDau']['EVALUATE_NAME'] ?></option>
+                        <?php
+                            }
+                        ?>
+                    </select>
                     
                     <label><input id="IsExcludeFromPriceEstimation" name="IsExcludeFromPriceEstimation" type="checkbox" value="true"><input name="IsExcludeFromPriceEstimation" type="hidden" value="false">Loại khỏi định giá</label>
                 </div>
@@ -49,21 +74,24 @@
             <div class="control-group">
                 <label class="control-label">Tình trạng:</label>
                 <div class="controls">
-<select class="select-box" id="StatusCssClass" name="StatusCssClass"><option value="st-new">Đang cập nhật</option>
-<option selected="selected" value="st-selling">Đang rao</option>
-<option value="st-negotiate">Đang thương lượng</option>
-<option value="st-sold">Đã giao dịch</option>
-<option value="st-onhold">Tạm ngưng</option>
-<option value="st-trash">Chờ xóa</option>
-<option value="st-no-contact">Không liên lạc được</option>
-<option value="st-estimate">BĐS Định giá</option>
-<option value="st-pending">Đang chờ duyệt</option>
-<option value="st-approved">Đã duyệt</option>
-<option value="st-invalid">Không hợp lệ</option>
-<option value="st-draft">Đang soạn thảo</option>
-<option value="st-trashed">Người đăng đã xóa</option>
-<option value="st-info">Thông tin tham khảo</option>
-</select>                        <label><input id="IsSoldByGroup" name="IsSoldByGroup" type="checkbox" value="true"><input name="IsSoldByGroup" type="hidden" value="false">Được bán bởi Group</label>
+                    <select class="select-box" id="StatusCssClass" name="StatusCssClass">
+                        <?php
+                            foreach ($tinhTranglist as $tinhTrang){
+                        ?>
+                            <option 
+                                <?php 
+                                    if(isset($dbdNews['BDS_NEWS']['TINH_TRANG_CODE'])){
+                                        if($dbdNews['BDS_NEWS']['TINH_TRANG_CODE'] == $tinhTrang['TinhTrang']['TINH_TRANG_CODE']){
+                                            echo 'selected="selected"';
+                                        }
+                                    }
+                                ?>
+                                value="<?php echo $tinhTrang['TinhTrang']['TINH_TRANG_CODE'] ?>"><?php echo $tinhTrang['TinhTrang']['TINH_TRANG_NAME'] ?></option>
+                        <?php
+                            }
+                        ?>
+                    </select>                        
+                <label><input id="IsSoldByGroup" name="IsSoldByGroup" type="checkbox" value="true"><input name="IsSoldByGroup" type="hidden" value="false">Được bán bởi Group</label>
                     <div><em>Ngày thay đổi trạng thái gần nhất     <span>31/01/2018 11:28:11</span>
  bời Tu Anh</em></div>
                 </div>
@@ -177,15 +205,7 @@ N/A                </div>
         <div class="form-horizontal pull-left">
             <div class="control-group" style="font-style:italic;">
                 <!-- VisitedCount -->
-                <div>Đã có <strong>0</strong> khách hàng đến xem BĐS này.</div>
-                <!-- LastUpdatedUser -->
-                <div><strong>Nguồn gần nhất:</strong> Tu Anh - <strong>Sửa bởi:</strong> Tu Anh ngày     <span>31/01/2018 11:28:11</span>
-</div>
-                <!-- CreatedUser -->
-                <div><strong>Nguồn đầu tiên:</strong> Tu Anh - <strong>Tạo bởi:</strong> Tu Anh ngày     <span>31/01/2018 11:28:11</span>
-</div>
-                <!-- UserGroup -->
-                    <div>BĐS thuộc group <strong>Quan10</strong>  - BĐS nội bộ</div>
+                <!-- TODO -->
             </div>
         </div>
         <div class="clearfix"></div>
@@ -422,28 +442,54 @@ N/A                </div>
             </div>
         </div>
     </header>
+    <br>
     <article>
         <div class="form-horizontal pull-left">
             <!-- AdsType -->
             <div class="control-group">
                 <label class="control-label"><span class="text-error">*</span> Loại giao dịch:</label>
                 <div class="controls">
-                    <select class="select-box" id="AdsTypeCssClass" name="AdsTypeCssClass"><option selected="selected" value="ad-selling">Bán</option>
-<option value="ad-leasing">Cho thuê</option>
-</select>
+                    <select class="select-box" id="AdsTypeCssClass" name="AdsTypeCssClass">
+                        <?php
+                            foreach ($loaiTinlist as $loaiTin){
+                        ?>
+                            <option 
+                                <?php 
+                                    if(isset($dbdNews['BDS_NEWS']['TYPE_NEWS_CODE'])){
+                                        if($dbdNews['BDS_NEWS']['TYPE_NEWS_CODE'] == $day['DayList']['DAY_LIST_CODE']){
+                                            echo 'selected="selected"';
+                                        }
+                                    }
+                                ?>
+                                value="<?php echo $loaiTin['LoaiTin']['TYPE_NEWS_CODE'] ?>"><?php echo $loaiTin['LoaiTin']['TYPE_NEWS_NAME'] ?>
+                            </option>
+                        <?php
+                            }
+                        ?>
+                    </select>
                     
 
                     <!-- Published -->
                     <label class="w180"><input checked="checked" id="Published" name="Published" type="checkbox" value="true"><input name="Published" type="hidden" value="false">Published</label>
                     <!-- AdsExpirationDate -->
                     <select id="AddAdsExpirationDate" name="AddAdsExpirationDate">
-                        <option selected="selected" value="None"></option>
-                        <option value="Day10">10 ngày</option>
-                        <option value="Day20">20 ngày</option>
-                        <option value="Day30">30 ngày</option>
-                        <option value="Day60">60 ngày</option>
-                        <option value="Day90">90 ngày</option>
-                        <option value="Day180">180 ngày</option>
+                        <?php
+                            foreach ($dayList as $day){
+                        ?>
+                            <option 
+                                <?php 
+                                    if(isset($dbdNews['BDS_NEWS']['DAY_LIST_CODE'])){
+                                        if($dbdNews['BDS_NEWS']['DAY_LIST_CODE'] == $day['DayList']['DAY_LIST_CODE']){
+                                            echo 'selected="selected"';
+                                        }
+                                    }
+                                ?>
+                                value="<?php echo $day['DayList']['DAY_LIST_CODE'] ?>">
+                                    <?php echo $day['DayList']['DAY_LIST_NAME'] ?>
+                            </option>
+                        <?php
+                            }
+                        ?>
                     </select>
                     <input class="text date-box date-box-full hasDatepicker" id="AdsExpirationDate" name="AdsExpirationDate" type="text" value="30/7/2018 4:28:11 AM">
                 </div>
@@ -452,9 +498,23 @@ N/A                </div>
             <div class="control-group">
                 <label class="control-label"><span class="text-error">*</span> Nhóm BĐS:</label>
                 <div class="controls">
-                    <select class="select-box" data-current-value="gp-house" id="TypeGroupCssClass" name="TypeGroupCssClass"><option selected="selected" value="gp-house">Nhà đất</option>
-<option value="gp-apartment">Căn hộ</option>
-</select>
+                    <select class="select-box" data-current-value="gp-house" id="TypeGroupCssClass" name="TypeGroupCssClass">
+                        <?php
+                            foreach ($nhomBdsList as $nhomBds){
+                        ?>
+                            <option 
+                                <?php 
+                                    if(isset($dbdNews['BDS_NEWS']['GROUP_CODE'])){
+                                        if($dbdNews['BDS_NEWS']['GROUP_CODE'] == $nhomBds['NhomBds']['GROUP_CODE']){
+                                            echo 'selected="selected"';
+                                        }
+                                    }
+                                ?>
+                                value="<?php echo $nhomBds['NhomBds']['GROUP_CODE'] ?>"><?php echo $nhomBds['NhomBds']['GROUP_NAME'] ?></option>
+                        <?php
+                            }
+                        ?>
+                    </select>
                     
 
                     <!-- AdsGoodDeal -->
@@ -1864,3 +1924,5 @@ Số nhà / Số lô:                    <a href="https://dulieunhadat.vn/Admin/
         </div>
         
     </article></div>
+
+    <?php echo $this->Form->end()?>
