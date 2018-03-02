@@ -141,4 +141,13 @@ class RwsConstant {
 	
 	//Time get rss
 	const ITEM_TIME_GET_RSS_NEWS = 15;
+
+	/* Google App Client ID */
+	const GOOGLE_OAUTH_CLIENT_ID = '625257681961-mf3u2fhgg4n5cbl75qbupbt062o18j4n.apps.googleusercontent.com';
+
+	/* Google App Client Secret */
+	const GOOGLE_OAUTH_CLIENT_SECRET = '6NSSpjgQ0e8BbhHPd9xgP2Nr';
+
+	/* Google App Redirect Url */
+	const GOOGLE_OAUTH_REDIRECT_URI = 'http://localhost:81/';
 }

@@ -69,7 +69,7 @@ class AppController extends Controller {
 		// Check login
 		if(isset($this->params['controller'])){
 			if ($this->params['controller'] !== 'login' && !$this->Session->check(RwsConstant::SESSION_LOGIN_USER_KEY)) {
-				$accept = array('results','watch','createUser','news','newsList','about','getRssNews','bdsNews');
+				$accept = array('results','watch','createUser','news','newsList','about','getRssNews','bdsNews','bdsNewsList');
 				if(!in_array($this->params['controller'],$accept)){
 					$adminPage = array('codeDebug','editNews','editUser','find','getVideoInfo','manage','manageReup','manageTemp','search','seoTag','seoTop','userPersonalSetting');
 					if(in_array($this->params['controller'],$adminPage)){

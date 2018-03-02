@@ -197,13 +197,13 @@ class LoginController extends AppController {
 					}
 
 					// Fixed 2015/04/16 for MENU display
-// 					$auth = $this->TAuth->find('first', array(
+					$auth = $this->TAuth->find('first', array(
 // 							'conditions' => array(
 // 									'USER_ID' => $user_id,
 // 									'AUTH_EDIT' => '1',
 // 									'DELETE_YMD is null'
 // 							)
-// 					));
+ 					));
 // 					if (!empty($auth)) {
 // 						$this->Session->write(RwsConstant::SESSION_SITE_AUTH_EDIT, true);
 // 					}
@@ -269,4 +269,107 @@ class LoginController extends AppController {
 	
 		return $data;
 	}
+
+	/**
+ * This function will makes Oauth Api reqest
+ */
+	public function googlelogin()
+	{
+
+		$this->autoRender = false;
+		require_once '../Lib/Google/autoload.php';
+		$client = new Google_Client();
+		$client->setRedirectUri(RwsConstant::GOOGLE_OAUTH_REDIRECT_URI);
+		$client->setClientSecret(RwsConstant::GOOGLE_OAUTH_CLIENT_SECRET);
+		$client->setClientId(RwsConstant::GOOGLE_OAUTH_CLIENT_ID);
+		$client->setScopes(array('https://www.googleapis.com/auth/plus.login','https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/plus.me'));
+		$client->setApprovalPrompt('auto');
+
+		$url = $client->createAuthUrl();
+
+		$this->redirect($url);
+	}
+
+/**
+ * This function will handle Oauth Api response
+ */
+	public function google_login()
+	{
+		$this->autoRender = false;
+		require_once '../Lib/Google/autoload.php';
+		$client = new Google_Client();
+		$client->setScopes(array('https://www.googleapis.com/auth/plus.login','https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/plus.me'));
+		$client->setApprovalPrompt('auto');
+
+		$plus       = new Google_PlusService($client);
+		$oauth2     = new Google_Oauth2Service($client);
+		if(isset($_GET['code'])) {
+			$client->authenticate(); // Authenticate
+			$_SESSION['access_token'] = $client->getAccessToken(); // get the access token here
+		}
+
+		if(isset($_SESSION['access_token'])) {
+			$client->setAccessToken($_SESSION['access_token']);
+		}
+
+		if ($client->getAccessToken()) {
+			$_SESSION['access_token'] = $client->getAccessToken();
+			$user         = $oauth2->userinfo->get();
+			try {
+				if(!empty($user)){
+					$result = $this->User->findByEmail( $user['email'] );
+					if(!empty( $result )){
+						if($this->Auth->login($result['User'])){
+							$this->Session->setFlash(GOOGLE_LOGIN_SUCCESS, 'default', array( 'class' => 'message success'), 'success' );
+							$this->redirect(BASE_PATH);
+						}else{
+							$this->Session->setFlash(GOOGLE_LOGIN_FAILURE, 'default', array( 'class' => 'message error'), 'error' );
+							$this->redirect(BASE_PATH.'login');
+						}
+							
+					}else{
+						$data = array();
+						$data['email'] = $user['email'];
+						$data['first_name'] = $user['given_name'];
+						$data['last_name'] = $user['family_name'];
+						$data['social_id'] = $user['id'];
+						$data['picture'] = $user['picture'];
+						$data['gender'] = $user['gender'] == 'male' ? 'm':'f';
+						$data['user_level_id'] = 1;
+						$data['uuid'] = String::uuid();
+						$this->User->save( $data );
+						if($this->User->save( $data )){
+							$data['id'] = $this->User->getLastInsertID();
+							if($this->Auth->login($data)){
+								$this->Session->setFlash(GOOGLE_LOGIN_SUCCESS, 'default', array( 'class' => 'message success'), 'success' );
+								$this->redirect(BASE_PATH);
+							}else{
+								$this->Session->setFlash(GOOGLE_LOGIN_FAILURE, 'default', array( 'class' => 'message error'), 'error' );
+								$this->redirect(BASE_PATH.'login');
+							}
+								
+						}else{
+							$this->Session->setFlash(GOOGLE_LOGIN_FAILURE, 'default', array( 'class' => 'message error'), 'error' );
+							$this->redirect(BASE_PATH.'login');
+						}
+					}
+						
+				}else{
+					$this->Session->setFlash(GOOGLE_LOGIN_FAILURE, 'default', array( 'class' => 'message error'), 'error' );
+					$this->redirect(BASE_PATH.'login');
+				}
+			}catch (Exception $e) {
+				$this->Session->setFlash(GOOGLE_LOGIN_FAILURE, 'default', array( 'class' => 'message error'), 'error' );
+				$this->redirect(BASE_PATH.'login');
+			}
+		}
+
+		exit;
+	}
+
+	/*public function beforeFilter()
+	{
+       $this->Auth->allow('google_login', 'googlelogin' );
+       parent::beforeFilter();
+	}*/
 }
