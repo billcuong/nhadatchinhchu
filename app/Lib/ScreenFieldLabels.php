@@ -86,6 +86,8 @@ class ScreenFieldLabels {
 			
 			//Menu
 			'SCR_MENU_ADMIN' => 'Chỉnh sửa người dùng',
+			'SCR_MENU_BDS_NEWS_LIST' => 'Danh sách BDS nội bộ',
+			'SCR_MENU_BDS_NEWS' => 'Chi tiết BDS',
 			'SCR_MENU_SUBSCRIPTION' => 'Video theo dõi Youtube',
 			'SCR_MENU_REUP' => 'Video nhà cộng tác viên',
 			'SCR_MENU_SEARCH' => 'Tìm videos bằng api',

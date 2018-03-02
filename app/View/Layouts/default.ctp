@@ -348,6 +348,41 @@
 													class="guide-channel guide-notification-item overflowable-list-item "
 													id="UCkwKXIFgDWCJkuTJbkg227A-guide-item"><a
 													class="guide-item yt-uix-sessionlink yt-valign spf-link   "
+													href="<?php echo RwsConstant::FULL_BASE_URL_HOST . "/bdsNewsList";?>"
+													title="My Channel"> <span class="yt-valign-container"> <span
+															class="thumb guide-my-channel-icon yt-sprite"></span> <span
+															class="display-name  no-count"> <span> <?php echo  $scrFieldLabels['SCR_MENU_BDS_NEWS_LIST'];?> </span>
+														</span>
+													</span>
+												</a></li>
+												<?php 
+												}
+												if($login_user_role <= RwsConstant::USER_AUTH_ROLE_M4){
+												?>
+												<li
+													class="guide-channel guide-notification-item overflowable-list-item "
+													id="UCkwKXIFgDWCJkuTJbkg227A-guide-item"><a
+													class="guide-item yt-uix-sessionlink yt-valign spf-link   "
+													href="<?php echo RwsConstant::FULL_BASE_URL_HOST . "/bdsNews";?>"
+													title="My Channel"> <span class="yt-valign-container"> <span
+															class="thumb guide-my-channel-icon yt-sprite"></span> <span
+															class="display-name  no-count"> <span> <?php echo  $scrFieldLabels['SCR_MENU_BDS_NEWS'];?> </span>
+														</span>
+													</span>
+												</a></li>
+												<br>
+												<br>
+												<br>
+												<br>
+												<br>
+												<?php 
+												}
+												if($login_user_role <= RwsConstant::USER_AUTH_ROLE_M4){
+												?>
+												<li
+													class="guide-channel guide-notification-item overflowable-list-item "
+													id="UCkwKXIFgDWCJkuTJbkg227A-guide-item"><a
+													class="guide-item yt-uix-sessionlink yt-valign spf-link   "
 													href="<?php echo RwsConstant::FULL_BASE_URL_HOST . "/edit/user";?>"
 													title="My Channel"> <span class="yt-valign-container"> <span
 															class="thumb guide-my-channel-icon yt-sprite"></span> <span
