@@ -18,7 +18,17 @@ class BDSNewsController extends AppController {
 			'TinhTrang',
 			'LoaiTin',
 			'DayList',
-			'NhomBds'
+			'NhomBds',
+			'PhapLy',
+			'Huong',
+			'ViTri',
+			'SoTang',
+			'LoaiCongTrinh',
+			'MucXay',
+			'LoaiBds',
+			'TinVip',
+			'DiemTot',
+			'DiemXau'
 	);
 	
 	/**
@@ -68,6 +78,91 @@ class BDSNewsController extends AppController {
 						))
 		);
 		$this->set('nhomBdsList', $nhomBdsList);
+
+		$phapLyList = $this->PhapLy->find('all', array(
+						'conditions' => array(
+								'PhapLy.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('phapLyList', $phapLyList);
+
+		$phapLyList = $this->PhapLy->find('all', array(
+						'conditions' => array(
+								'PhapLy.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('phapLyList', $phapLyList);
+
+		$huongList = $this->Huong->find('all', array(
+						'conditions' => array(
+								'Huong.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('huongList', $huongList);
+
+		$viTriList = $this->ViTri->find('all', array(
+						'conditions' => array(
+								'ViTri.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('viTriList', $viTriList);
+
+		$soTangList = $this->SoTang->find('all', array(
+						'conditions' => array(
+								'SoTang.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('soTangList', $soTangList);
+
+		$soTangList = $this->SoTang->find('all', array(
+						'conditions' => array(
+								'SoTang.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('soTangList', $soTangList);
+
+
+		$loaiCongTrinhList = $this->LoaiCongTrinh->find('all', array(
+						'conditions' => array(
+								'LoaiCongTrinh.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('loaiCongTrinhList', $loaiCongTrinhList);
+
+		$mucXayList = $this->MucXay->find('all', array(
+						'conditions' => array(
+								'MucXay.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('mucXayList', $mucXayList);
+
+		$loaiBdsList = $this->LoaiBds->find('all', array(
+						'conditions' => array(
+								'LoaiBds.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('loaiBdsList', $loaiBdsList);
+
+		$tinVipList = $this->TinVip->find('all', array(
+						'conditions' => array(
+								'TinVip.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('tinVipList', $tinVipList);
+
+		$diemTotList = $this->DiemTot->find('all', array(
+						'conditions' => array(
+								'DiemTot.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('diemTotList', $diemTotList);
+
+		$diemXauList = $this->DiemXau->find('all', array(
+						'conditions' => array(
+								'DiemXau.DELETE_YMD IS NULL'
+						))
+		);
+		$this->set('diemXauList', $diemXauList);
 
 
 		return $this->render ( '/bdsNews' );
