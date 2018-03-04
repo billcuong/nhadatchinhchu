@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: http://www.nhapholocphat.vn/action/getRssNews
-Disallow: /cgi-bin/
-Sitemap: http://www.nhapholocphat.vn/sitemap.xml
