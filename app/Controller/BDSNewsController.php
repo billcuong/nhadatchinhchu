@@ -28,7 +28,11 @@ class BDSNewsController extends AppController {
 			'LoaiBds',
 			'TinVip',
 			'DiemTot',
-			'DiemXau'
+			'DiemXau',
+			'Province',
+			'District',
+			'Ward',
+			'Street'
 	);
 	
 	/**
@@ -163,13 +167,136 @@ class BDSNewsController extends AppController {
 						))
 		);
 		$this->set('diemXauList', $diemXauList);
-
-
-		return $this->render ( '/bdsNews' );
+		
+		$provinceList = $this->Province->find('all', array(
+						'conditions' => array(
+								'Province.PROVINCE_STATUS = 1'
+						))
+		);
+		$this->set('provinceList', $provinceList);
+		
+		$paraNews = $this->request->query;
+		if(isset($paraNews['id'])){
+			$bdsNewsId = $paraNews['id'];
+			$bdsNews = $this->BDSNews->find('first', array(
+						'conditions' => array(
+								'BDSNews.DELETE_YMD IS NULL',
+								'BDSNews.BDSNEWS_ID =' . $bdsNewsId
+						))
+			);
+			if($bdsNews != null){
+				$this->set('bdsNews', $bdsNews);
+				
+				$provinceCode = $bdsNews['BDSNews']['PROVINCE_CODE']; 
+				$districtList = $this->District->find('all', array(
+						'conditions' => array(
+								'District.DISTRICT_STATUS = 1',
+								'District.PROVINCE_CODE =' . $provinceCode
+						))
+				);
+				$this->set('districtList', $districtList);
+				
+				$districtCode = $bdsNews['BDSNews']['DISTRICT_CODE'];
+				$wardList = $this->Ward->find('all', array(
+						'conditions' => array(
+								'Ward.WARD_STATUS = 1',
+								'Ward.DISTRICT_CODE =' . $districtCode
+						))
+				);
+				$this->set('wardList', $wardList);
+				
+				$wardCode = $bdsNews['BDSNews']['WARD_CODE'];
+				$streetList = $this->Street->find('all', array(
+						'conditions' => array(
+								'Street.STREET_STATUS = 1',
+								'Street.DISTRICT_CODE =' . $districtCode 
+						))
+				);
+				$this->set('streetList', $streetList);
+			}
+			
+//			var_dump($bdsNews);
+//			die;
+			return $this->render ( '/bdsNews' );
+		}
+		return $this->render ( '/createBdsNews' );
 	}
 
+	public function doGetDistricts(){
+		$this->ajaxAction();
+		$data = $_POST ['dataInput'];
+		$provinceCode = $data[0];
+		$districtList = $this->District->find('all', array(
+						'conditions' => array(
+								'District.DISTRICT_STATUS = 1',
+								'District.PROVINCE_CODE =' . $provinceCode 
+						))
+		);
+		if(!empty($districtList)){
+			$res['success'] = false;
+			$res['districtList'] = $districtList;
+			return json_encode($res);
+		}
+		$res['success'] = true;
+		$res['districtList'] = $districtList;
+		return json_encode($res);
+	}
+	
+	public function doGetWards(){
+		$this->ajaxAction();
+		$data = $_POST ['dataInput'];
+		$districtCode = $data[0];
+		$wardList = $this->Ward->find('all', array(
+						'conditions' => array(
+								'Ward.WARD_STATUS = 1',
+								'Ward.DISTRICT_CODE =' . $districtCode 
+						))
+		);
+		if(!empty($wardList)){
+			$res['success'] = false;
+			$res['wardList'] = $wardList;
+			return json_encode($res);
+		}
+		$res['success'] = true;
+		$res['wardList'] = $wardList;
+		return json_encode($res);
+	}
+	
+	public function doGetStreets(){
+		$this->ajaxAction();
+		$data = $_POST ['dataInput'];
+		$districtCode = $data[0];
+		$streetList = $this->Street->find('all', array(
+						'conditions' => array(
+								'Street.STREET_STATUS = 1',
+								'Street.DISTRICT_CODE =' . $districtCode 
+						))
+		);
+		if(!empty($streetList)){
+			$res['success'] = false;
+			$res['streetList'] = $streetList;
+			return json_encode($res);
+		}
+		$res['success'] = true;
+		$res['streetList'] = $streetList;
+		return json_encode($res);
+	}
+	
 	public function add() {
-		return $this->render ( '/bdsNews/add' );
+		
+		return $this->render ( '/bdsNews' );
+	}
+	
+	public function doAddBDSNews() {
+		
+		$this->Session->setFlash($this->messages['OPERATION_SUCCESS'], 'message', array('message_type' => RwsConstant::MSG_SUCCESS));
+		return $this->render ( '/bdsNews' );
+	}
+	
+	public function doUpdateBDSNews() {
+		
+		$this->Session->setFlash($this->messages['OPERATION_SUCCESS'], 'message', array('message_type' => RwsConstant::MSG_SUCCESS));
+		return $this->render ( '/bdsNews' );
 	}
 
 }
