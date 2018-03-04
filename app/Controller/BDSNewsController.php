@@ -171,5 +171,4 @@ class BDSNewsController extends AppController {
 	public function add() {
 		return $this->render ( '/bdsNews/add' );
 	}
-
 }

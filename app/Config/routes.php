@@ -54,7 +54,7 @@
 	Router::connect('/maintenance', array('controller' => 'appMaintenance', 'action' => 'index'));
 	Router::connect('/googlelogin', array('controller' => 'login', 'action' => 'googlelogin'));
 	Router::connect('/google_login', array('controller' => 'login', 'action' => 'google_login'));	
-	Router::connect('/bdsnoibo', array('controller' => 'bDSNewsList', 'action' => 'index'));
+	Router::connect('/bdsnoibo', array('controller' => 'bDSNewsList', 'action' => 'index'));	
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
